@@ -1,0 +1,82 @@
+" Environment
+set directory=$XDG_CACHE_HOME/vim,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:·
+
+" Line numbering
+set number relativenumber numberwidth=4
+
+" Default tabs
+set ts=4 sts=4 sw=4 expandtab
+
+" Turn off annoying backup ~ files
+set nobackup
+
+" Easily switch windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Syntax highlighting
+if has("autocmd")
+    " Put file syntax preferences here
+    filetype indent plugin on
+
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+    autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+
+    autocmd BufWritePre *.py,*.js,*.rb :call <SID>StripWhitespace()
+    nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
+endif
+
+function! <SID>StripWhitespace()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+
+    " Do the business:
+    %s/\s\+$//e
+
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+" Download plug.vim if not already installed
+if empty(glob('$XDG_CONFIG_HOME/vim/autoload/plug.vim'))
+    silent !curl -fLo $XDG_CONFIG_HOME/vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+    Plug 'tpope/vim-sensible'
+    Plug 'junegunn/seoul256.vim'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'garbas/vim-snipmate'
+    Plug 'honza/vim-snippets'
+    Plug 'bling/vim-airline'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
+    Plug 'mattn/emmet-vim'
+call plug#end()
+
+" set 256 colours
+set t_Co=256
+colorscheme seoul256
