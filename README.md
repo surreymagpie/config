@@ -23,6 +23,9 @@ To use these on a new machine:
   
   # Write the config into the correct locations
   config checkout master
+  
+  # Hide untracked files
+  config config --local status.showUntrackedFiles no
 ```
 
 ## Usage
