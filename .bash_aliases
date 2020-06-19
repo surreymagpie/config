@@ -1,7 +1,39 @@
+# Listings
+alias l='ls -lah'
+alias la='ls -lAh'
+alias ll='ls -lh'
+alias ls='ls --color=tty'
 
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
+# Directory movement
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
 
-alias config='/usr/bin/git --git-dir=/home/rob/.dotfiles/ --work-tree=/home/rob'
+# Safety switches
+alias rm='rm -i'
+alias mv='mv -i'
 
+alias md='mkdir -p'
+alias rd='rmdir'
+
+# Git commands
+alias g=git
+alias gst='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gcm='git checkout master'
+alias gd='git diff'
+alias gf='git fetch'
+alias gp='git push'
+alias gpl='git pull'
+alias goat='git push origin --all && git push origin --tags'
+alias gra='git remote add'
+alias grb='git rebase'
+alias grhh='git reset --hard HEAD'
+alias gss='git status -s'
+alias gsu='git submodule update'
+
+# Dotfile configuration alias
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
