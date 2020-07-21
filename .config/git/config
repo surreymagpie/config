@@ -35,3 +35,5 @@
 	prompt = false
 [mergetool]
 	prompt = false
+[pull]
+	ff = only
