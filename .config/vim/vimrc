@@ -5,6 +5,10 @@ set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
 let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
 
+" Explicitly set the Snipmate parser to the new version
+" as the old one is deprecated.
+let g:snipMate = { 'snippet_version' : 1 }
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
