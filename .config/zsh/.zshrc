@@ -16,9 +16,10 @@ bindkey -e
 zstyle :compinstall filename '/home/rob/.config/zsh/.zshrc'
 
 autoload -Uz compinit promptinit; compinit ; promptinit
-prompt adam1
+PROMPT="%F{154}%n%f@%F{white}%m%f%B%F{117} %~ %f%b%# "
+RPROMPT="%?"
 
-source .config/aliases
+source $XDG_CONFIG_HOME/aliases
 
 # Enable autosuggestions if installed
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
