@@ -12,6 +12,9 @@ export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
 setopt autocd
 bindkey -e
+bindkey '\e[3~' delete-char
+bindkey '\e[H' beginning-of-line
+bindkey '\e[F' end-of-line
 
 zstyle :compinstall filename '/home/rob/.config/zsh/.zshrc'
 
