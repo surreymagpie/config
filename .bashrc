@@ -115,3 +115,9 @@ source $XDG_CONFIG_HOME/bash/prompt.sh
 if [ -f $XDG_CONFIG_HOME/aliases ]; then
     . $XDG_CONFIG_HOME/aliases
 fi
+
+# Setup nvm if it is installed
+# `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
