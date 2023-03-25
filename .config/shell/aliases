@@ -37,3 +37,6 @@ alias gsu='git submodule update'
 
 # Dotfile configuration alias
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Setup direnv in project (i.e. direnv init)
+alias di="touch .envrc && echo dotenv >> .envrc && touch .env"
