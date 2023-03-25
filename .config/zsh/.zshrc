@@ -1,5 +1,3 @@
-neofetch
-
 # Ensure history file exists
 HISTFILE=$XDG_CACHE_HOME/zsh/histfile
 HISTSIZE=1000
