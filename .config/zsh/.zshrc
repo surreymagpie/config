@@ -22,7 +22,9 @@ autoload -Uz compinit promptinit; compinit ; promptinit
 PROMPT="%F{154}%n%f@%F{white}%m%f%B%F{117} %~ %f%b%# "
 RPROMPT="%?"
 
-source $XDG_CONFIG_HOME/aliases
+if [ -f $XDG_CONFIG_HOME/shell/aliases ]; then
+	source $XDG_CONFIG_HOME/shell/aliases
+fi
 
 # Enable autosuggestions if installed
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then

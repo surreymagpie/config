@@ -109,11 +109,11 @@ source $XDG_CONFIG_HOME/bash/prompt.sh
 
 # Alias definitions.
 # You may want to put all your aliases into a separate file like
-# $XDG_CONFIG_HOME/bash/aliases, instead of adding them here directly.
+# $XDG_CONFIG_HOME/shell/aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f $XDG_CONFIG_HOME/aliases ]; then
-    . $XDG_CONFIG_HOME/aliases
+# Load shared aliases
+if [ -f $XDG_CONFIG_HOME/shell/aliases ]; then
+    . $XDG_CONFIG_HOME/shell/aliases
 fi
 
 # Setup nvm if it is installed
