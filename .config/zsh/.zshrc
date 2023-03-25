@@ -33,3 +33,8 @@ fi
 if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# Load `direnv` if installed
+if [ $(command -v direnv) ]; then
+    eval "$(direnv hook zsh)"
+fi

@@ -115,3 +115,8 @@ source $XDG_CONFIG_HOME/bash/prompt.sh
 if [ -f $XDG_CONFIG_HOME/shell/aliases ]; then
     . $XDG_CONFIG_HOME/shell/aliases
 fi
+
+# Load `direnv` if installed
+if [ $(command -v direnv) ]; then
+    eval "$(direnv hook bash)"
+fi
