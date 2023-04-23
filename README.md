@@ -22,7 +22,7 @@ To use these on a new machine:
   rm .bashrc .gitconfig
   
   # Write the config into the correct locations
-  config checkout master
+  config checkout main
   
   # Hide untracked files
   config config --local status.showUntrackedFiles no
@@ -35,5 +35,5 @@ Any file which needs tracking, simply use the alias, instead of git directly, e.
 ```bash
   config add <path to file>
   config commit -m 'Add <file>'
-  config push origin master
+  config push origin main
 ```
