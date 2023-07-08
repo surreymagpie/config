@@ -12,20 +12,20 @@ A shell alias `config` is used in place of the regular `git` command to mange th
 To use these on a new machine:
 
 ```bash
-  # Setup the alias temporarily - it will be available automatically in future shell sessions
-  alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-  
-  # Download the repo
-  git clone --bare git@github.com:surreymagpie/config.git $HOME/.dotfiles
-  
-  # Remove (or backup) existing files
-  rm .bashrc .gitconfig
-  
-  # Write the config into the correct locations
-  config checkout main
-  
-  # Hide untracked files
-  config config --local status.showUntrackedFiles no
+# Setup the alias temporarily - it will be available automatically in future shell sessions
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# Download the repo
+git clone --bare git@github.com:surreymagpie/config.git $HOME/.dotfiles
+
+# Remove (or backup) existing files
+rm .bashrc .gitconfig
+
+# Write the config into the correct locations
+config checkout main
+
+# Hide untracked files
+config config --local status.showUntrackedFiles no
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ To use these on a new machine:
 Any file which needs tracking, simply use the alias, instead of git directly, e.g.:
 
 ```bash
-  config add <path to file>
-  config commit -m 'Add <file>'
-  config push origin main
+config add <path to file>
+config commit -m 'Add <file>'
+config push origin main
 ```
