@@ -5,9 +5,6 @@ SAVEHIST=1000
 mkdir -p $XDG_CACHE_HOME/zsh
 touch $HISTFILE
 
-# Load vim configuration from my config path
-export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
-
 setopt autocd
 bindkey -e
 bindkey '\e[3~' delete-char
