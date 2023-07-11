@@ -36,7 +36,7 @@ alias gss='git status -s'
 alias gsu='git submodule update'
 
 # Dotfile configuration alias
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config='GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME /usr/bin/git'
 
 # Avoid vim and neovim configs clashing
 alias vim='VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc" vim'

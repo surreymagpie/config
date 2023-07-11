@@ -13,7 +13,7 @@ To use these on a new machine:
 
 ```bash
 # Setup the alias temporarily - it will be available automatically in future shell sessions
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias config='GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME /usr/bin/git'
 
 # Download the repo
 git clone --bare git@github.com:surreymagpie/config.git $HOME/.dotfiles
