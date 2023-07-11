@@ -9,11 +9,13 @@ let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
 " as the old one is deprecated.
 let g:snipMate = { 'snippet_version' : 1 }
 
+" Map Space as <Leader>
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:·
+set listchars=tab:->,trail:-
 
 " Line numbering
 set number relativenumber numberwidth=4
