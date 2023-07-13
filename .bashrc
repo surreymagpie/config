@@ -117,3 +117,7 @@ fi
 if [ $(command -v direnv) ]; then
     eval "$(direnv hook bash)"
 fi
+
+# Load common environment
+source $XDG_CONFIG_HOME/shell/profile
+

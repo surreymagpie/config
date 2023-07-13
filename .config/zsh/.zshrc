@@ -37,3 +37,6 @@ if [ -f $HOME/.asdf/asdf.sh ]; then
     source "${XDG_CONFIG_HOME}/asdf-direnv/zshrc"
 fi
 
+# Load common environment
+source $XDG_CONFIG_HOME/shell/profile
+
