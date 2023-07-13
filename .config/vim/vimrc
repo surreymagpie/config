@@ -75,6 +75,7 @@ call plug#begin()
     Plug 'jiangmiao/auto-pairs'
     Plug 'MarcWeber/vim-addon-mw-utils'
     Plug 'garbas/vim-snipmate'
+    Plug 'tomtom/tlib_vim'
     Plug 'honza/vim-snippets'
     Plug 'bling/vim-airline'
     Plug 'ctrlpvim/ctrlp.vim'
