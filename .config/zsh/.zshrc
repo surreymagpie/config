@@ -31,12 +31,17 @@ if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+# Load common environment
+source $XDG_CONFIG_HOME/shell/profile
+
+# Load `direnv` if installed
+if [ $(command -v direnv) ]; then
+    eval "$(direnv hook zsh)"
+fi
+
 # If ASDF installed, source it
 if [ -f $HOME/.asdf/asdf.sh ]; then
     source $HOME/.asdf/asdf.sh
     source "${XDG_CONFIG_HOME}/asdf-direnv/zshrc"
 fi
-
-# Load common environment
-source $XDG_CONFIG_HOME/shell/profile
 
