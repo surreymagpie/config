@@ -14,7 +14,7 @@
 	st = status
 [core]
 	autocrlf = input
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore
 	pager = less -FRSX
 [merge]
