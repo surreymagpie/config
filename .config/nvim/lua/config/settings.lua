@@ -6,10 +6,14 @@ vim.opt.relativenumber = true                   -- helps to gauge jumps
 -- Formatting
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
-vim.opt.showtabline = 2                        -- always show tabs
+vim.opt.showtabline = 2                         -- always show tabs
 vim.opt.smartindent = true                      -- make indenting smarter again
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
+vim.opt.listchars = {
+  eol = '¬',
+  trail = '-'
+}
 
 -- General
 vim.opt.backup = false                          -- creates a backup file
@@ -27,3 +31,5 @@ vim.opt.hlsearch = true                         -- highlight all matches on prev
 vim.opt.ignorecase = true                       -- ignore case in search patterns
 vim.opt.smartcase = true                        -- smart case
 
+-- Appearance
+vim.opt.termguicolors = true
