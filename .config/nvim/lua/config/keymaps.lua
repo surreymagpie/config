@@ -1,5 +1,5 @@
--- Open NetRW
-vim.keymap.set('n', '<leader>e', '<cmd>:Lexplore 25<CR>')
+-- Open Neotree
+vim.keymap.set('n', '<leader>e', '<cmd>:Neotree toggle reveal left<CR>')
 
 -- Show list characters
 vim.keymap.set('n', '<leader>l', '<cmd>set list!<CR>')

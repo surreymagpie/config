@@ -12,7 +12,10 @@ vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 vim.opt.listchars = {
   eol = '¬',
-  trail = '-'
+  trail = '-',
+  tab = '>·',
+  extends = '>',
+  precedes = '<'
 }
 
 -- General
