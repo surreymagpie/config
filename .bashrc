@@ -122,7 +122,7 @@ fi
 source $XDG_CONFIG_HOME/shell/profile
 
 # Download nvm if it is not installed
-if [ ! -f .config/nvm/nvm.sh ]; then
+if [ ! -f $HOME/.config/nvm/nvm.sh ]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 fi
 
