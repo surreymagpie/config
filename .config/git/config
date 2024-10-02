@@ -16,7 +16,7 @@
 	autocrlf = input
 	editor = nvim
 	excludesfile = ~/.gitignore
-	pager = less -FRSX
+	pager = delta
 [merge]
 	ff = only
 	tool = vimdiff
