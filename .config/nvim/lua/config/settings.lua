@@ -11,11 +11,11 @@ vim.opt.smartindent = true                      -- make indenting smarter again
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 vim.opt.listchars = {
-  eol = '¬',
-  trail = '-',
-  tab = '>·',
-  extends = '>',
-  precedes = '<'
+  eol = "¬",
+  trail = "-",
+  tab = ">·",
+  extends = ">",
+  precedes = "<"
 }
 
 -- General
@@ -36,3 +36,4 @@ vim.opt.smartcase = true                        -- smart case
 
 -- Appearance
 vim.opt.termguicolors = true
+
