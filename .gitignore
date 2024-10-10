@@ -1,0 +1,39 @@
+# Ignore the dotfiles repo itself
+.dotfiles/
+
+# Ignore sensitive folders
+.ssh/
+.gnupg/
+
+# Ignore hidden folders that we
+# probably don't need to track
+.bundle/
+.cache/
+.composer/
+.gnupg/
+.local/
+.ssh/
+.var/
+.vscode/
+
+# Ignore user document directories
+Code/
+Dad/
+Desktop/
+Documents/
+Downloads/
+eBooks/
+Music/
+Pictures/
+Podcasts/
+Public/
+Templates/
+Videos/
+
+# Ignore `NodeJS` and `Firefox` data
+.npm/
+.mozilla/
+
+# Other ignores...
+.config/nvim/lazy-lock.json
+
