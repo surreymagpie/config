@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>e", "<cmd>:Neotree toggle reveal left<CR>", { desc 
 vim.keymap.set("n", "<leader>l", "<cmd>set list!<CR>", { desc = "Show invisible characters" })
 
 -- clear search highlights
-vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { desc = "Clear search highlights" })
+vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { desc = "Clear search highlights", silent = true })
 
 -- window management
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
