@@ -1,4 +1,3 @@
-require('rob.appearance')
-require('rob.maps')
-require('rob.settings')
-
+require("config.lazy")
+require("config.keymaps")
+require("config.settings")
