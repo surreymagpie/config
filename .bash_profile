@@ -5,5 +5,3 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-# User specific environment and startup programs
-eval "$($RBENV_ROOT/bin/rbenv init - --no-rehash bash)"

@@ -89,23 +89,3 @@ if [ $(command -v direnv) ]; then
     eval "$(direnv hook zsh)"
 fi
 
-# Download nvm if it is not installed
-if [ ! -f .config/nvm/nvm.sh ]; then
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-fi
-
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# Download `rbenv` if not installed
-export RBENV_ROOT=$HOME/.local/share/rbenv
-
-if [ ! -d $RBENV_ROOT ]; then
-  mkdir -p $RBENV_ROOT
-  git clone https://github.com/rbenv/rbenv.git $RBENV_ROOT
-  git clone https://github.com/rbenv/ruby-build.git "$RBENV_ROOT"/plugins/ruby-build
-fi
-
-FPATH="$FPATH":$RBENV_ROOT/completions
-eval "$($RBENV_ROOT/bin/rbenv init - --no-rehash zsh)"
