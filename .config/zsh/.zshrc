@@ -47,7 +47,7 @@ zinit snippet OMZP::composer
 zinit snippet OMZP::sudo
 
 # Add directory for custom completions if any
-fpath=($ZDOTDIR/completions $fpath)
+fpath=(/usr/share/zsh/vendor-completions $ZDOTDIR/completions $fpath)
 
 # Load completions
 autoload -U compinit && compinit
