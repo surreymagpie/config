@@ -1,17 +1,30 @@
+# Dotfiles
 
-# A new home for my dotfiles
+This repo is based upon the Atlassian tutorial [The best way to store your dotfiles: A bare Git
+repository](https://www.atlassian.com/git/tutorials/dotfiles).
 
-This repo is based upon the Atlassian tutorial [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles). This, in turn is based on a Hacker News thread [here](https://news.ycombinator.com/item?id=11070797).
+It uses a bare git repo located in a `.dotfiles` directory within my `$HOME`. Any file within
+`$HOME` can be tracked as required, but local git configuration is set to not display untracked
+files (which would otherwise become unworkable). I intend to use this to help me keep my $HOME
+directory in a more tidy fashion.
 
-It uses a bare git repo located in a `.dotfiles` directory within my `$HOME`. Any file within `$HOME` can be tracked as required, but local git configuration is set to not display untracked files (which would otherwise become unworkable). I intend to use this to help me keep my $HOME directory in a more tidy fashion.
+A shell alias `config` is used in place of the regular `git` command to mange this repo.
 
-I have setup configurations for vim and git so that these are stored within `$XDG_CONFIG_HOME`. This takes more work to setup but should only need doing once. The `$HOME/.gitconfig` **must** be removed if it already exists as it would be read first and the `$XDG_CONFIG_HOME/git/config` file would be ignored.
+---
 
-A shell alias `config` is used in place of the regular `git` command to mange this repo. 
+> [!NOTE]
+>
+> As of Sept 2025, configuration for Neovim has been moved to a separate repository at
+> [https://git.curtishall.uk/surreymagpie/nvim](https://git.curtishall.uk/surreymagpie/nvim)
+>
+
+---
+
+## Setup
 
 To use these on a new machine:
 
-```bash
+``` bash
 # Setup the alias temporarily - it will be available automatically in future shell sessions
 alias config='GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME /usr/bin/git'
 
@@ -30,10 +43,13 @@ config config --local status.showUntrackedFiles no
 
 ## Usage
 
-Any file which needs tracking, simply use the alias, instead of git directly, e.g.:
+Any file which needs tracking, simply use the alias, instead of git directly,
 
-```bash
+e.g.:
+
+``` bash
 config add <path to file>
-config commit -m 'Add <file>'
+config commit
 config push origin main
 ```
+
