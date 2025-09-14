@@ -15,7 +15,7 @@ A shell alias `config` is used in place of the regular `git` command to mange th
 > [!NOTE]
 >
 > As of Sept 2025, configuration for Neovim has been moved to a separate repository at
-> [https://git.curtishall.uk/surreymagpie/nvim](https://git.curtishall.uk/surreymagpie/nvim)
+> [https://git.curtishall.uk/surreymagpie/neovim](https://git.curtishall.uk/surreymagpie/neovim)
 >
 
 ---
